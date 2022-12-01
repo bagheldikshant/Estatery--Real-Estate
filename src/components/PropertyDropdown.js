@@ -13,14 +13,13 @@ const PropertyDropdown = () => {
     <Menu as='div' className='dropdown relative'>
       <Menu.Button
         onClick={() => setIsOpen(!isOpen)}
-        className='dropdown-btn w-full text-left'
+        className='dropdown-btn w-full text-left h-14 border-zinc-300 rounded-[3px]'
       >
-        <RiHome5Line className='dropdown-icon-primary' />
+        
         <div>
-          <div className='text-[15px] font-medium leading-tight'>
+          <div className='text-[15px] font-bold font-medium leading-tight'>
             {property}
           </div>
-          <div className='text-[13px]'>Choose property type</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className='dropdown-icon-secondary' />

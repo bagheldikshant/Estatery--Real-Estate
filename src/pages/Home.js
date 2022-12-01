@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
+import Banner from "../components/Banner";
 
 // import components
-import HouseList from '../components/HouseList';
-import Banner from '../components/Banner';
+import HouseList from "../components/HouseList";
+import Search from "../components/Search";
 
 const Home = () => {
   return (
-    <div className='min-h-[1800px]'>
+    <div className="bg-violet-10">
       <Banner />
+      <Search />
       <HouseList />
     </div>
   );

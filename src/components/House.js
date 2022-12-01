@@ -1,43 +1,42 @@
-import React from 'react';
+import React from "react";
 
 // import icons
-import { BiBed, BiBath, BiArea } from 'react-icons/bi';
+import { BiBed, BiBath, BiArea } from "react-icons/bi";
 
 const House = ({ house }) => {
   return (
-    <div className='bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition'>
-      <img className='mb-8' src={house.image} alt='' />
-      <div className='mb-4 flex gap-x-2 text-sm'>
-        <div className='bg-green-500 rounded-full text-white px-3 inline-block'>
-          {house.type}
+    <div className="bg-white shadow-1  rounded-lg w-full max-w-[352px] mx-auto cursor-pointer hover:shadow-2xl transition">
+      <img className="mb-8 rounded-t-lg" src={house.image} alt="" />
+      <div className="p-5 pt-0">
+        <div className="text-lg font-semibold text-violet-600 mb-4">
+          ${house.price}
+          <span className="text-gray-400 text-sm">/month</span>
         </div>
-        <div className='bg-violet-500 rounded-full text-white px-3 inline-block'>
-          {house.country}
+        <div className="text-lg font-bold max-w-[260px] mb-3">{house.name}</div>
+        <div className="text-sm font-bold text-gray-400 max-w-[260px] mb-3">
+          {house.address}
         </div>
-      </div>
-      <div className='text-lg font-semibold max-w-[260px]'>{house.address}</div>
-      <div className='flex gap-x-4 my-4'>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px] rounded-full'>
-            <BiBed />
+        <hr className="font-bold" />
+        <div className="flex gap-x-4 mt-4">
+          <div className="flex items-center text-gray-600 gap-1">
+            <div className="text-[20px] rounded-full text-violet-500">
+              <BiBed />
+            </div>
+            <div className="text-sm ">{house.bedrooms} Beds</div>
           </div>
-          <div className='text-base'>{house.bedrooms}</div>
-        </div>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px] rounded-full'>
-            <BiBath />
+          <div className="flex items-center text-gray-600 gap-1">
+            <div className="text-[20px] rounded-full text-violet-500">
+              <BiBath />
+            </div>
+            <div className="text-sm">{house.bathrooms} Bathrooms</div>
           </div>
-          <div className='text-base'>{house.bathrooms}</div>
-        </div>
-        <div className='flex items-center text-gray-600 gap-1'>
-          <div className='text-[20px] rounded-full'>
-            <BiArea />
+          <div className="flex items-center text-gray-600 gap-1">
+            <div className="text-[20px] rounded-full text-violet-500">
+              <BiArea />
+            </div>
+            <div className="text-sm">{house.surface}</div>
           </div>
-          <div className='text-base'>{house.surface}</div>
         </div>
-      </div>
-      <div className='text-lg font-semibold text-violet-600 mb-4'>
-        $ {house.price}
       </div>
     </div>
   );

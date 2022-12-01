@@ -43,12 +43,11 @@ const PriceRangeDropdown = () => {
     <Menu as='div' className='dropdown relative'>
       <Menu.Button
         onClick={() => setIsOpen(!isOpen)}
-        className='dropdown-btn w-full'
+        className='dropdown-btn w-full h-14 border-zinc-300 rounded-[3px]'
       >
-        <RiWallet3Line className='dropdown-icon-primary' />
         <div>
-          <div className='text-[15px] font-medium leading-tight'>{price}</div>
-          <div className='text-[13px]'>Choose price range</div>
+          <div className='text-[15px]  font-bold font-medium leading-tight'>{price}</div>
+          
         </div>
         {isOpen ? (
           <RiArrowUpSLine className='dropdown-icon-secondary' />
